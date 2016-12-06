@@ -10,13 +10,14 @@ import Foundation
 let array = ["A", "13", "B", "5", "87", "t", "41"]
 var sum = 0
 for string in array {
-    if Int(string) != nil {
-        let intToAdd = Int(string)!
+    if Int(string) != nil { //Coverts any "numerical" strings to Int's (Non-numbers are nil)
+        let intToAdd = Int(string)! /* If string is indeed a numerical value, it converts & unwraps and adds to sum */
         sum += intToAdd
     }
 }
 print(sum)
 
+/*Essentially, this code can determine which is a numerical string in the array and convert it to an Int value. The values are then added together to provide the sum of all numerical values in the array.*/
 /*:
  ****
  [Table of Contents](Table%20of%20Contents) | [Previous](@previous)

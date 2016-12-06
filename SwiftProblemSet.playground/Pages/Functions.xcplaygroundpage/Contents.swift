@@ -95,19 +95,25 @@ func beginsWithVowel(word: String) -> Bool {
  
  **Hint**: Re-use the `beginsWithVowel` function.
  */
-func funWithWords(/* add parameters here */) /* define the return type */ {
+func funWithWords(word: String) -> String {
     /* add function implementation here */
+    let wordIsVowel = beginsWithVowel(word: word)
+    
+    if wordIsVowel {
+        let uppercasedWord = word.uppercased()
+        return uppercasedWord
+    } else {
+        let lowercasedWord = word.lowercased()
+        return lowercasedWord
+    }
 }
 
-/* Example Function Call
- 
- funWithWords("Apples") // "APPLES"
- funWithWords("pIG") // "pig"
- funWithWords("oink") // "OINK"
- funWithWords("udacity") // "UDACITY"
- funWithWords("") // ""
- 
- */
+ funWithWords(word: "Apples") // "APPLES"
+ funWithWords(word: "pIG") // "pig"
+ funWithWords(word: "oink") // "OINK"
+ funWithWords(word: "udacity") // "UDACITY"
+ funWithWords(word: "") // ""
+
 /*:
  ****
  [Table of Contents](Table%20of%20Contents) | [Previous](@previous) | [Next](@next)
